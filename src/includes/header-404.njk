@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#151515">
+  <title>Страница не найдена | {{ metadata.title }}</title>
+  <meta name="description" content="{{ metadata.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Страница не найдена | {{ metadata.title }}">
+  <meta property="og:site_name" content="{{ metadata.description }}">
+  <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ metadata.url }}/assets/img/pstshrng.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Страница не найдена | {{ metadata.title }}">
+  <meta name="twitter:description" content="{{ metadata.description }}">
+  <meta name="twitter:site" content="{{ metadata.url }}{{ page.url }}">
+  <meta name="twitter:image" content="{{ metadata.url }}/assets/img/pstshrng.jpg">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/vendor.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Yandex.Metrika informer
+<a href="https://metrika.yandex.ru/stat/?id=45503529&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/45503529/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="45503529" data-lang="ru" /></a>
+/Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(45503529, "init", {
+    id:45503529,
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true,
+    trackHash:true
+  });
+</script>
+</head>
+<body class="{{ class }}">
+  <div class="site-container">
+    <header class="header">
+      <div class="container header__container">
+        <a href="/" class="logo header__logo" aria-label="Логотип MaxGraph">
+          <svg>
+            <use xlink:href="/assets/img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <div class="header__right">
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="/about/" class="nav__link">обо мне</a></li>
+              <li class="nav__item"><a href="/consult/" class="nav__link">менторство</a></li>
+              <li class="nav__item"><a href="{{ metadata.blog }}" target="_blank" class="nav__link">блог</a></li>
+            </ul>
+          </nav>
+          <button class="btn-reset theme-switch" aria-label="Сменить тему сайта">
+            <svg class="theme-switch__icon dark">
+              <use xlink:href="/assets/img/sprite.svg#toggle-to-dark"></use>
+            </svg>
+            <svg class="theme-switch__icon light">
+              <use xlink:href="/assets/img/sprite.svg#toggle-to-light"></use>
+            </svg>
+          </button>
+          <button class="btn-reset burger" aria-label="Открыть меню сайта">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>

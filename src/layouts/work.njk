@@ -1,0 +1,142 @@
+{% include 'header-work.njk' %}
+
+<main class="main">
+  <section class="work-hero">
+    <div class="container">
+      <h1 class="work-hero__title">
+        <span class="work-hero__sub">{{ cat }}</span>
+        {{ siteTitle }}
+      </h1>
+      <a href="{{ link }}" class="work-hero__link" target="_blank" aria-label="Ссылка на рабочий сайт Сайт">{{ linkText }}</a>
+      <div class="work-hero__image">
+        <video src="{{ siteVideo }}" preload="metadata" loop muted autoplay playsinline></video>
+      </div>
+      <div class="work-hero__info grid">
+        <div class="work-hero__block">
+          <h3 class="work-hero__subtitle">о клиенте</h3>
+          <p class="work-hero__descr">
+            {{ aboutClient }}
+          </p>
+        </div>
+        <div class="work-hero__block">
+          <h3 class="work-hero__subtitle">задача</h3>
+          <p class="work-hero__descr">
+            {{ task }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <h2 class="title process__title">процесс</h2>
+      <ul class="process__list">
+        <li class="process__item">
+          <div class="process__image">
+            <img src="{{ layoutingImage }}" loading="lazy" alt="Процесс верстки сайта">
+          </div>
+          <div class="process__text grid">
+            <h3 class="process__subtitle">верстка макета</h3>
+            <p class="process__descr">
+              {{ layouting }}
+            </p>
+          </div>
+        </li>
+        <li class="process__item">
+          <div class="process__image">
+            <img src="{{ jsImage }}" loading="lazy" alt="Процесс разработки интерактива сайта">
+          </div>
+          <div class="process__text grid">
+            <h3 class="process__subtitle">интерактивность</h3>
+            <p class="process__descr">
+              {{ js }}
+            </p>
+          </div>
+        </li>
+        <li class="process__item">
+          <div class="process__image">
+            <img src="{{ animationImage }}" loading="lazy" alt="Процесс создания анимации на сайте">
+          </div>
+          <div class="process__text grid">
+            <h3 class="process__subtitle">анимации</h3>
+            <p class="process__descr">
+              {{ animation }}
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="result">
+    <div class="container">
+      <div class="result__top">
+        <h2 class="title result__title">результат</h2>
+        <a href="{{ link }}" class="result__link" target="_blank" aria-label="Ссылка на рабочий сайт Сайт">{{ linkText }}</a>
+      </div>
+    </div>
+    <div class="result__bottom">
+      <div class="container">
+        <ul class="result__list grid">
+          <li class="result__item">
+            <span class="result__item-text">затрачено времени</span>
+            <span class="result__item-value">{{ time }}</span>
+          </li>
+          <li class="result__item">
+            <span class="result__item-text">бюджет проекта</span>
+            <span class="result__item-value">{{ budget }} руб</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="work-testimonial">
+    <div class="container">
+      <h2 class="title work-testimonial__title">отзыв</h2>
+      <article class="work-testimonial__item testimonial">
+        <h3 class="testimonial__title visually-hidden">Отзыв заказчика {{ testimonialName }}</h3>
+        <div class="testimonial__image">
+          <img src="{{ testimonialImage }}" loading="lazy" alt="Фотография заказчика">
+        </div>
+        <div class="testimonial__info">
+          <div class="testimonial__name">{{ testimonialName }}</div>
+          <div class="testimonial__post">{{ testimonialPost }}</div>
+          <p class="testimonial__text">
+            {{ testimonialText }}
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+  {%- set nextPost = collections.works | getNextCollectionItem(page) %}
+  {%- if nextPost %}
+    <a href="{{ nextPost.url | url }}" class="next-project" style="background-image: url('{{nextPost.url}}img/cover.jpg')">
+      <div class="container next-project__container">
+        <h2 class="title next-project__title">
+          <span class="next-project__sub">Следующий проект</span>
+          {{ nextPost.data.siteTitle }}
+          <svg class="next-project__arrow">
+            <use xlink:href="/assets/img/sprite.svg#next-proj"></use>
+          </svg>
+        </h2>
+      </div>
+    </a>
+  {% else %}
+    <a href="/kluev-bz/" class="next-project" style="background-image: url('/kluev-bz/img/cover.jpg')">
+      <div class="container next-project__container">
+        <h2 class="title next-project__title">
+          <span class="next-project__sub">Следующий проект</span>
+          kluev.bz
+          <svg class="next-project__arrow">
+            <use xlink:href="/assets/img/sprite.svg#next-proj"></use>
+          </svg>
+        </h2>
+      </div>
+    </a>
+  {% endif %}
+
+</main>
+
+{% include 'footer.njk' %}

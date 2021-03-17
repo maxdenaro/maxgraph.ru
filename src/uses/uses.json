@@ -1,0 +1,6 @@
+{
+  "permalink": "{{ page.fileSlug }}/",
+  "tags": "uses",
+  "cover": "img/cover.jpg",
+  "layout": "us.njk"
+}

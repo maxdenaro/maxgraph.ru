@@ -1,0 +1,9 @@
+{
+  "permalink": "{{ page.fileSlug }}/",
+  "layout": "work.njk",
+  "tags": "works",
+  "cover": "img/cover.jpg",
+  "layoutingImage": "img/layouting.jpg",
+  "jsImage": "img/js.jpg",
+  "animationImage": "img/animation.jpg"
+}

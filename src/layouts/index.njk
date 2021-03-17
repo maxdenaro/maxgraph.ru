@@ -1,0 +1,94 @@
+{% include 'header.njk' %}
+
+<main class="main">
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__text">
+        <h1 class="hero__title">
+          <span class="hero__subtitle">{{ greeting }}</span>
+          {{ iam }}
+        </h1>
+        <p class="hero__descr">
+          {{ descr }}
+        </p>
+      </div>
+      <div class="contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item"><a href="{{ metadata.telegram }}" target="_blank" class="contacts__link">telegram</a></li>
+          <li class="contacts__item"><a href="{{ metadata.vk }}" target="_blank" class="contacts__link">vk</a></li>
+          <li class="contacts__item"><a href="{{ metadata.whatsapp }}" target="_blank" class="contacts__link">whatsapp</a></li>
+        </ul>
+        <a href="mailto:{{ metadata.email }}" class="contacts__mail">{{ metadata.email }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container portfolio__container">
+      <h2 class="title portfolio__title">примеры работ</h2>
+    </div>
+    <ul class="portfolio__list">
+      {% for work in collections.works %}
+        <li class="portfolio__list-item">
+          <article class="portfolio-item">
+            <a href="{{ work.url }}" class="portfolio-item__link">
+              <div class="portfolio-item__bg" style="background-image: url('{{ work.url }}{{ work.data.cover }}')"></div>
+              <div class="container">
+                <span class="portfolio-item__theme">{{ work.data.cat }}</span>
+                <h3 class="portfolio-item__title">{{ work.data.siteTitle }}</h3>
+              </div>
+            </a>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="blog">
+    <div class="container">
+      <h2 class="title blog__title">блог</h2>
+      <p class="blog__descr">
+        веду свой блог на <a href="{{ metadata.youtube }}" target="_blank" class="link">youtube.com</a> и <a href="{{ metadata.blog }}" target="_blank" class="link">blog.maxgraph.ru</a>
+      </p>
+      <ul class="blog__list grid">
+        <li class="blog__item">
+          <article class="youtube-video">
+            <a href="#" class="youtube-video__link">
+              <div class="youtube-video__text">
+                <time class="youtube-video__time" datetime="2021-02-19">19 февраля 2021</time>
+                <h3 class="youtube-video__title">
+                  как наладить коммуникацию с&nbsp;тем, кто отказывается коммуницировать? 800 простых советов!
+                </h3>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li class="blog__item">
+          <article class="blog-post">
+            <a href="#" class="blog-post__link">
+              <img src="/assets/img/blog-post-image.jpg" alt="" class="blog-post__image">
+              <time class="blog-post__time" datetime="2021-02-19">19 февраля 2021</time>
+              <h3 class="blog-post__title">
+                средняя подборка плагинов на&nbsp;чистом css для однообразных задач
+              </h3>
+            </a>
+          </article>
+        </li>
+        <li class="blog__item">
+          <article class="blog-post">
+            <a href="#" class="blog-post__link">
+              <img src="/assets/img/blog-post-image.jpg" alt="" class="blog-post__image">
+              <time class="blog-post__time" datetime="2021-02-19">19 февраля 2021</time>
+              <h3 class="blog-post__title">
+                средняя подборка плагинов на&nbsp;чистом css для однообразных задач
+              </h3>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+{% include 'footer.njk' %}

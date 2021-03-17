@@ -1,0 +1,194 @@
+{% include 'header-inner.njk' %}
+
+<main class="main">
+  <section class="hero consult-hero">
+    <div class="container consult-hero__container grid">
+      <div class="hero__text">
+        <h1 class="hero__title">
+          {{ greeting }}
+        </h1>
+        <p class="hero__descr">
+          {{ descr }}
+        </p>
+      </div>
+      <div class="hero__image">
+        <img class="hero__image-active dark" src="/assets/img/consult.svg" alt="" aria-hidden="true">
+        <img class="light" src="/assets/img/consult-light.svg" alt="" aria-hidden="true">
+      </div>
+      <div class="contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item"><a href="{{ metadata.telegram }}" target="_blank" class="contacts__link">telegram</a></li>
+          <li class="contacts__item"><a href="{{ metadata.vk }}" target="_blank" class="contacts__link">vk</a></li>
+          <li class="contacts__item"><a href="{{ metadata.whatsapp }}" target="_blank" class="contacts__link">whatsapp</a></li>
+        </ul>
+        <a href="mailto:{{ metadata.email }}" class="contacts__mail">{{ metadata.email }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="themes">
+    <div class="container">
+      <h2 class="title themes__title">консультирую по темам:</h2>
+      <ul class="themes__list grid">
+        <li class="themes__item">
+          <h3 class="themes__subtitle">html/css</h3>
+          <p class="themes__descr">
+            разберем любую тему, связанную с языками html и css
+          </p>
+        </li>
+        <li class="themes__item">
+          <h3 class="themes__subtitle">js</h3>
+          <p class="themes__descr">
+            поговорим на тему javascript, разберем сложные моменты
+          </p>
+        </li>
+        <li class="themes__item">
+          <h3 class="themes__subtitle">доступность</h3>
+          <p class="themes__descr">
+            расскажу, как сделать свои сайты доступнее для людей с ограниченными возможностями
+          </p>
+        </li>
+        <li class="themes__item">
+          <h3 class="themes__subtitle">ошибки и баги</h3>
+          <p class="themes__descr">
+            посмотрим ваш проект, устраним ошибки и доведем его до завершения
+          </p>
+        </li>
+        <li class="themes__item">
+          <h3 class="themes__subtitle">код-ревью</h3>
+          <p class="themes__descr">
+            тщательно проверю ваш сайт на валидность, доступность, баги и прочее
+          </p>
+        </li>
+        <li class="themes__item">
+          <h3 class="themes__subtitle">инструменты</h3>
+          <p class="themes__descr">
+            расскажу, какими инструментами нужно пользоваться для быстрой и удобной разработки
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="container">
+      <h2 class="title why__title">почему я?</h2>
+    </div>
+    <div class="why__content">
+      <div class="container">
+        <ul class="why__list grid">
+          <li class="why__item" style="background-image: url('/assets/img/why-1.svg');">
+            <h3 class="why__subtitle">большой опыт</h3>
+            <p class="why__descr">занимаюсь веб-разработкой более 5-ти лет</p>
+          </li>
+          <li class="why__item" style="background-image: url('/assets/img/why-2.svg');">
+            <h3 class="why__subtitle">грамотный фидбек</h3>
+            <p class="why__descr">я ежедневно провожу разборы работ и знаю, где искать ошибки</p>
+          </li>
+          <li class="why__item" style="background-image: url('/assets/img/why-3.svg');">
+            <h3 class="why__subtitle">удобный формат</h3>
+            <p class="why__descr">личные онлайн-консультации в zoom, discord, skype</p>
+          </li>
+          <li class="why__item" style="background-image: url('/assets/img/why-4.svg');">
+            <h3 class="why__subtitle">видимый результат</h3>
+            <p class="why__descr">после консультаций со мной ваша проблема будет решена</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="consult-testimonial">
+    <div class="container">
+      <h2 class="title consult-testimonial__title">отзывы</h2>
+      <ul class="consult-testimonial__list">
+        <li class="consult-testimonial__item">
+          <article class="work-testimonial__item testimonial">
+            <h3 class="testimonial__title visually-hidden">Отзыв заказчика Кристины</h3>
+            <div class="testimonial__image">
+              <img src="/assets/img/testimonial-image.jpg" alt="ФИО Заказчика">
+            </div>
+            <div class="testimonial__info">
+              <div class="testimonial__name">Кристина</div>
+              <div class="testimonial__post">менеджер проектов phigital</div>
+              <p class="testimonial__text">
+                Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                факта:
+                дальнейшее развитие различных форм деятельности требует определения и&nbsp;уточнения.
+              </p>
+            </div>
+          </article>
+        </li>
+        <li class="consult-testimonial__item">
+          <article class="work-testimonial__item testimonial">
+            <h3 class="testimonial__title visually-hidden">Отзыв заказчика Кристины</h3>
+            <div class="testimonial__image">
+              <img src="/assets/img/testimonial-image.jpg" alt="ФИО Заказчика">
+            </div>
+            <div class="testimonial__info">
+              <div class="testimonial__name">Кристина</div>
+              <div class="testimonial__post">менеджер проектов phigital</div>
+              <p class="testimonial__text">
+                Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                факта:
+                дальнейшее развитие различных форм деятельности требует определения и&nbsp;уточнения.
+              </p>
+            </div>
+          </article>
+        </li>
+        <li class="consult-testimonial__item">
+          <article class="work-testimonial__item testimonial">
+            <h3 class="testimonial__title visually-hidden">Отзыв заказчика Кристины</h3>
+            <div class="testimonial__image">
+              <img src="/assets/img/testimonial-image.jpg" alt="ФИО Заказчика">
+            </div>
+            <div class="testimonial__info">
+              <div class="testimonial__name">Кристина</div>
+              <div class="testimonial__post">менеджер проектов phigital</div>
+              <p class="testimonial__text">
+                Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                факта:
+                дальнейшее развитие различных форм деятельности требует определения и&nbsp;уточнения.
+              </p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="format">
+    <div class="container">
+      <h2 class="title format__title">формат консультаций</h2>
+      <ul class="format__list grid">
+        <li class="format__item" style="background-image: url('/assets/img/format-1.svg');">
+          <article class="format__block">
+            <h3 class="format__subtitle">Стандарт</h3>
+            <p class="format__descr">
+              За один час разберем ваш вопрос. Пишите в телеграм для заявки.
+            </p>
+            <span class="format__price">700 руб</span>
+          </article>
+        </li>
+        <li class="format__item" style="background-image: url('/assets/img/format-2.svg');">
+          <article class="format__block">
+            <h3 class="format__subtitle">Длительный</h3>
+            <p class="format__descr">
+              Беседа длиной в два часа. Подойдет, если у вас сложный вопрос по проекту.
+            </p>
+            <span class="format__price">1100 руб</span>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sale">
+    <div class="container sale__container">
+      <h2 class="sale__title">скидка 10% на первую консультацию</h2>
+    </div>
+  </section>
+
+</main>
+
+{% include 'footer.njk' %}
