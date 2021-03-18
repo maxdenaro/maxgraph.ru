@@ -30,8 +30,9 @@
         {% for use in collections.uses | reverse %}
           <li class="use__item">
             <h3 class="use__subtitle">{{ use.data.title }}</h3>
+						{{use.data | consoleDump}}
             <ul class="use__sublist list">
-              {% for item in use.data.content %}
+              {% for item in use.data.contents %}
                 <li class="list__item">{{ item }}</li>
               {% endfor %}
             </ul>
