@@ -92,24 +92,26 @@
     </div>
   </section>
 
-  <section class="work-testimonial">
-    <div class="container">
-      <h2 class="title work-testimonial__title">отзыв</h2>
-      <article class="work-testimonial__item testimonial">
-        <h3 class="testimonial__title visually-hidden">Отзыв заказчика {{ testimonialName }}</h3>
-        <div class="testimonial__image">
-          <img src="{{ testimonialImage }}" loading="lazy" alt="Фотография заказчика">
-        </div>
-        <div class="testimonial__info">
-          <div class="testimonial__name">{{ testimonialName }}</div>
-          <div class="testimonial__post">{{ testimonialPost }}</div>
-          <p class="testimonial__text">
-            {{ testimonialText }}
-          </p>
-        </div>
-      </article>
-    </div>
-  </section>
+  {% if testimonialName %}
+    <section class="work-testimonial">
+      <div class="container">
+        <h2 class="title work-testimonial__title">отзыв</h2>
+        <article class="work-testimonial__item testimonial">
+          <h3 class="testimonial__title visually-hidden">Отзыв заказчика {{ testimonialName }}</h3>
+          <div class="testimonial__image">
+            <img src="{{ testimonialImage }}" loading="lazy" alt="Фотография заказчика">
+          </div>
+          <div class="testimonial__info">
+            <div class="testimonial__name">{{ testimonialName }}</div>
+            <div class="testimonial__post">{{ testimonialPost }}</div>
+            <p class="testimonial__text">
+              {{ testimonialText }}
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  {% endif %}
   {%- set nextPost = collections.works | getNextCollectionItem(page) %}
   {%- if nextPost %}
     <a href="{{ nextPost.url | url }}" class="next-project" style="background-image: url('{{nextPost.url}}img/cover.jpg')">
