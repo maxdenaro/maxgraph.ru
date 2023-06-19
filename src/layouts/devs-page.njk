@@ -1,0 +1,35 @@
+{% include 'header-inner.njk' %}
+
+<main class="main">
+  <section class="hero hero--devs">
+    <div class="container hero__container grid">
+      <div class="hero__text">
+        <h1 class="hero__title">
+          {{ title }}
+        </h1>
+        <p class="hero__descr">
+          {{ descr }}
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="themes">
+    <div class="container">
+      <h2 class="title themes__title visually-hidden">разработано:</h2>
+      <ul class="devs-list grid">
+        {% for dev in collections.devs | reverse %}
+          <li class="devs-list__item">
+            <a href="{{ dev.data.link }}" target="_blank" class="dev-link">
+              <div class="devs-list__subtitle">{{ dev.data.title }}</div>
+              <p class="devs-list__descr">
+                {{ dev.data.descr }}
+              </p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</main>
+
+{% include 'footer.njk' %}
